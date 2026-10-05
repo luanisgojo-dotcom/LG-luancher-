@@ -8,7 +8,7 @@ on:
 jobs:
   BuildRelease:
      github.repository_owner == 'ZalithLauncher' && !startsWith(github.ref, 'refs/pull/') && github.ref_name == 'main'
-    runs-on: ubuntu-22.04
+    runs-on: arm64
     strategy:
       matrix:
         arch: [ "all", "arm", "arm64", "x86", "x86_64" ]
